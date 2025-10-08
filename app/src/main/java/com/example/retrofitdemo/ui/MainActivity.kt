@@ -1,7 +1,9 @@
 package com.example.retrofitdemo.ui
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.View
+import android.widget.Button
 import android.widget.ProgressBar
 import android.widget.TextView
 import androidx.activity.ComponentActivity
@@ -26,6 +28,13 @@ class MainActivity : ComponentActivity() {
         val rv = findViewById<RecyclerView>(R.id.rv)
         val progress = findViewById<ProgressBar>(R.id.progress)
         val tvError = findViewById<TextView>(R.id.tvError)
+        val btnGo = findViewById<Button>(R.id.btnGoToCreate)
+
+
+        btnGo.setOnClickListener {
+            val intent = Intent(this, CreatePostActivity::class.java)
+            startActivity(intent)
+        }
 
         adapter = PostAdapter()
         rv.layoutManager = LinearLayoutManager(this)

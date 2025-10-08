@@ -23,6 +23,13 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+
+        <!-- Nueva actividad que te pide agregar -->
+        <activity
+            android:name=".ui.CreatePostActivity"
+            android:exported="false" />
+
     </application>
 
 </manifest>
